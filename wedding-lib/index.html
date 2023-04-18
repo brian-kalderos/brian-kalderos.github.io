@@ -1,11 +1,393 @@
 <html>
 
 <head>
-  <title>Testing</title>
+  <title>Wedding Lib</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: #1E2533;
+      color: #FFFFFF;
+      padding: 24px;
+      max-width: 1200px;
+      box-sizing: border-box;
+      font-family: 'Mulish', sans-serif;
+      transition: background-color 1s ease-in;
+      transition: color .5s ease-out;
+
+    }
+
+    .header {
+      font-size: 48px;
+      font-weight: 700;
+    }
+
+    .input-wrapper {
+      margin-top: 48px;
+    }
+
+    .input-columns {
+      display: flex;
+      flex-direction: row;
+      gap: 24px;
+    }
+
+    .input-column {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .input-row {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+
+    .input-row label {
+      width: 170;
+      text-align: right;
+      margin-right: 12px;
+      font-size: 24px;
+      font-weight: 600;
+    }
+
+    input[type=text] {
+      background: transparent;
+      color: #1bdfc7;
+      padding: 4px;
+      font-family: 'Mulish', sans-serif;
+      font-size: 20px;
+      font-weight: 700;
+      width: 350px;
+      border: none;
+      border-bottom: 1px solid white;
+    }
+
+    input[type=text]:focus,
+    input[type=text]:active {
+      outline: none;
+      border: none;
+      border-bottom: 1px solid white;
+    }
+
+    .button-wrapper {
+      text-align: center;
+      margin-top: 60px;
+    }
+
+    .submit-button {
+      background: #0032FC;
+      color: #FFFFFF;
+      font-family: 'Mulish', sans-serif;
+      font-size: 24px;
+      font-weight: 700;
+      border: none;
+      padding: 8px 16px;
+      cursor: pointer;
+    }
+
+    .submit-button:focus,
+    .submit-button:active {
+      outline: 1px solid #FFFFFF;
+    }
+
+    .result-wrapper {
+      margin-top: 48px;
+      margin-left: 12px;
+      font-size: 24px;
+      display: none;
+    }
+
+    .result-row {
+      display: flex;
+      flex-direction: row;
+      font-size: 24px;
+      line-height: 36px;
+      margin-bottom: 24px;
+      white-space: nowrap;
+      font-weight: 600;
+    }
+
+    .result-number-list{
+      padding: 18px;
+    }
+
+    .sub-row {
+      margin-left: 28px;
+    }
+
+    .result-line {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      margin: 0 4px;
+    }
+
+    .result-text {
+      border-bottom: 1px solid #727C8F;
+      color: #0032FC;
+      padding: 0 8px;
+      font-weight: 700;
+      min-height: 36px;
+      white-space: nowrap;
+      text-align: center;
+    }
+
+    .result-type {
+      color: #727C8F;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      font-size: 10px;
+      line-height: 10px;
+      text-align: center;
+      margin-top: 1px;
+    }
+  </style>
+  <script>
+    function submit() {
+      for (i = 1; i <= 17; i++) {
+        document.getElementById("result" + i).innerHTML = document.getElementById("line" + i).value;
+      }
+      document.body.style.backgroundColor = "#FFFFFF";
+      document.body.style.color = "#424B5E";
+
+      document.getElementById("input-section").style.display = 'none';
+      document.getElementById("result-section").style.display = 'block';
+
+
+    }
+  </script>
 </head>
 
 <body>
-  Hello World
+  <div class="header">Some advice for the newlyweds to be...</div>
+  <div id="input-section" class="input-wrapper">
+    <div class="input-columns">
+      <div class="input-column">
+        <div class="input-row">
+          <label>Exclamation:</label>
+          <input id="line1" type="text" value="hello world" />
+        </div>
+        <div class="input-row">
+          <label>Adjective:</label>
+          <input id="line2" type="text" />
+        </div>
+        <div class="input-row">
+          <label>Verb:</label>
+          <input id="line3" type="text" />
+        </div>
+        <div class="input-row">
+          <label>Adjective:</label>
+          <input id="line4" type="text" />
+        </div>
+        <div class="input-row">
+          <label>Verb:</label>
+          <input id="line5" type="text" />
+        </div>
+        <div class="input-row">
+          <label>Noun:</label>
+          <input id="line6" type="text" />
+        </div>
+        <div class="input-row">
+          <label>Verb:</label>
+          <input id="line7" type="text" />
+        </div>
+        <div class="input-row">
+          <label>Noun:</label>
+          <input id="line8" type="text" />
+        </div>
+        <div class="input-row">
+          <label>Noun:</label>
+          <input id="line9" type="text" />
+        </div>
+      </div>
+      <div class="input-column">
+        <div class="input-row">
+          <label>Number:</label>
+          <input id="line10" type="text" />
+        </div>
+        <div class="input-row">
+          <label>Location/Place:</label>
+          <input id="line11" type="text" />
+        </div>
+        <div class="input-row">
+          <label>Food:</label>
+          <input id="line12" type="text" />
+        </div>
+        <div class="input-row">
+          <label>Adjective:</label>
+          <input id="line13" type="text" />
+        </div>
+        <div class="input-row">
+          <label>Adjective:</label>
+          <input id="line14" type="text" />
+        </div>
+        <div class="input-row">
+          <label>Phrase:</label>
+          <input id="line15" type="text" />
+        </div>
+        <div class="input-row">
+          <label>Noun:</label>
+          <input id="line16" type="text" />
+        </div>
+        <div class="input-row">
+          <label>Adjective:</label>
+          <input id="line17" type="text" />
+        </div>
+      </div>
+    </div>
+    <div class="button-wrapper">
+      <button type="button" class="submit-button" onclick="submit()">Submit</button>
+    </div>
+  </div>
+  <div id="result-section" class="result-wrapper">
+    <div class="result-row">
+      <div>When I heard Nate and Allison were getting married, I shouted</div>
+      <div class="result-line">
+        <div class="result-text" id="result1"></div>
+        <div class="result-type">exclamation</div>
+      </div>
+      <div>!</div>
+    </div>
+
+    <div class="result-row">
+      <div>I am so</div>
+      <div class="result-line">
+        <div class="result-text" id="result2"></div>
+        <div class="result-type">adjective</div>
+      </div>
+      <div>for the two of you. Here's my advice for a happy marriage:</div>
+    </div>
+
+    <div class="result-number-list">
+      <div class="result-row number-row">
+        <div>1. Remeber to always</div>
+        <div class="result-line">
+          <div class="result-text" id="result3"></div>
+          <div class="result-type">verb</div>
+        </div>
+        <div>each other.</div>
+      </div>
+
+      <div class="result-row number-row">
+        <div>2. Never go to bed</div>
+        <div class="result-line">
+          <div class="result-text" id="result4"></div>
+          <div class="result-type">adjective</div>
+        </div>
+        <div>.</div>
+      </div>
+
+      <div class="result-row number-row">
+        <div>3. Nate, you should always </div>
+        <div class="result-line">
+          <div class="result-text" id="result5"></div>
+          <div class="result-type">verb</div>
+        </div>
+        <div>Allison's</div>
+        <div class="result-line">
+          <div class="result-text" id="result6"></div>
+          <div class="result-type">noun</div>
+        </div>
+        <div>.</div>
+      </div>
+
+      <div class="result-row number-row">
+        <div>4. Allison, you should always </div>
+        <div class="result-line">
+          <div class="result-text" id="result7"></div>
+          <div class="result-type">verb</div>
+        </div>
+        <div>Nate's</div>
+        <div class="result-line">
+          <div class="result-text" id="result8"></div>
+          <div class="result-type">noun</div>
+        </div>
+        <div>.</div>
+      </div>
+
+      <div class="result-row number-row">
+        <div>5. Don't ever forget each other's</div>
+        <div class="result-line">
+          <div class="result-text" id="result9"></div>
+          <div class="result-type">noun</div>
+        </div>
+        <div>.</div>
+      </div>
+
+      <div class="result-row number-row">
+        <div>6. Schedule a date night at least once a</div>
+        <div class="result-line">
+          <div class="result-text" id="result10"></div>
+          <div class="result-type">number</div>
+        </div>
+        <div>.</div>
+      </div>
+
+      <div class="result-row sub-row">
+        <div>I recommend going to</div>
+        <div class="result-line">
+          <div class="result-text" id="result11"></div>
+          <div class="result-type">location</div>
+        </div>
+        <div>and trying the</div>
+        <div class="result-line">
+          <div class="result-text" id="result12"></div>
+          <div class="result-type">food</div>
+        </div>
+        <div>.</div>
+      </div>
+
+      <div class="result-row number-row">
+        <div>7. Always be there for each other through</div>
+        <div class="result-line">
+          <div class="result-text" id="result13"></div>
+          <div class="result-type">adjective</div>
+        </div>
+        <div>and</div>
+        <div class="result-line">
+          <div class="result-text" id="result14"></div>
+          <div class="result-type">adjective</div>
+        </div>
+        <div>.</div>
+      </div>
+
+      <div class="result-row number-row">
+        <div>8. Finally, remeber to say</div>
+        <div class="result-line">
+          <div class="result-text" id="result15"></div>
+          <div class="result-type">phrase</div>
+        </div>
+        <div>at least once a day.</div>
+      </div>
+    </div>
+
+    <div class="result-row">
+      <div>I wish you lots of</div>
+      <div class="result-line">
+        <div class="result-text" id="result16"></div>
+        <div class="result-type">noun</div>
+      </div>
+      <div>and a</div>
+      <div class="result-line">
+        <div class="result-text" id="result17"></div>
+        <div class="result-type">adjective</div>
+      </div>
+      <div>marriage for many years to come!</div>
+    </div>
+
+  </div>
+
 </body>
 
 </html>
