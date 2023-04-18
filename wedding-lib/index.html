@@ -155,16 +155,16 @@
   </style>
   <script>
     function submit() {
+      
       for (i = 1; i <= 17; i++) {
         document.getElementById("result" + i).innerHTML = document.getElementById("line" + i).value;
       }
+
       document.body.style.backgroundColor = "#FFFFFF";
       document.body.style.color = "#424B5E";
 
       document.getElementById("input-section").style.display = 'none';
       document.getElementById("result-section").style.display = 'block';
-
-
     }
   </script>
 </head>
@@ -225,11 +225,11 @@
           <input id="line12" type="text" />
         </div>
         <div class="input-row">
-          <label>Adjective:</label>
+          <label>Noun:</label>
           <input id="line13" type="text" />
         </div>
         <div class="input-row">
-          <label>Adjective:</label>
+          <label>Noun:</label>
           <input id="line14" type="text" />
         </div>
         <div class="input-row">
@@ -237,7 +237,7 @@
           <input id="line15" type="text" />
         </div>
         <div class="input-row">
-          <label>Noun:</label>
+          <label>Plural Noun:</label>
           <input id="line16" type="text" />
         </div>
         <div class="input-row">
@@ -326,12 +326,12 @@
       </div>
 
       <div class="result-row number-row">
-        <div>6. Schedule a date night at least once a</div>
+        <div>6. Schedule a date night at least</div>
         <div class="result-line">
           <div class="result-text" id="result10"></div>
           <div class="result-type">number</div>
         </div>
-        <div>.</div>
+        <div>times a month.</div>
       </div>
 
       <div class="result-row sub-row">
@@ -352,12 +352,12 @@
         <div>7. Always be there for each other through</div>
         <div class="result-line">
           <div class="result-text" id="result13"></div>
-          <div class="result-type">adjective</div>
+          <div class="result-type">noun</div>
         </div>
         <div>and</div>
         <div class="result-line">
           <div class="result-text" id="result14"></div>
-          <div class="result-type">adjective</div>
+          <div class="result-type">noun</div>
         </div>
         <div>.</div>
       </div>
