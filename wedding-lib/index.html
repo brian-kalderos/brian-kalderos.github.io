@@ -39,6 +39,17 @@
       gap: 24px;
     }
 
+    @media only screen and (max-width: 1149px) {
+      .input-columns {
+        flex-direction: column;
+        gap: 24px;
+      }
+
+      .button-wrapper {
+        max-width: 520px;
+      }
+    }
+
     .input-column {
       display: flex;
       flex-direction: column;
@@ -115,7 +126,7 @@
       font-weight: 600;
     }
 
-    .result-number-list{
+    .result-number-list {
       padding: 18px;
     }
 
@@ -154,7 +165,7 @@
   </style>
   <script>
     function submit() {
-      
+
       for (i = 1; i <= 17; i++) {
         document.getElementById("result" + i).innerHTML = document.getElementById("line" + i).value;
       }
