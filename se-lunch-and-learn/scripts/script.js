@@ -10,6 +10,20 @@ const links = [
   { view: 'testing', page: 'testing.html', icon: 'bi-bug' }
 ];
 
+function renderCommon(){
+  renderFooter();
+  renderDisclaimer();
+}
+
+function renderDisclaimer() {
+  var footer = document.createElement('div');
+  footer.classList.add('slide-footer');
+  footer.innerHTML = '<img src="images/wordmark_dark.svg"/><div>&copy; 2025 Kalderos, Inc. Proprietary and Confidential</div>';
+
+  var slideRoot = document.getElementsByClassName('slide-root')[0];
+  slideRoot.appendChild(footer);
+}
+
 function renderFooter() {
 
   var page = window.location.href.substring(window.location.href.lastIndexOf('/') + 1);
