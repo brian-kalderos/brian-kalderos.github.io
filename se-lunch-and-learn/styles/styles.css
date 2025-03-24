@@ -280,9 +280,14 @@ a:visited {
   height: 42px;
   padding: 8px;
   border-radius: 12px;
+  transition: transform 200ms;
 }
 
-.footer-icon:hover,
+.footer-icon:hover{
+  background: #424B5E;
+  transform: scale(1.2);
+}
+.footer-icon:active,
 .footer-icon.active {
   background: #2D57FF;
 }
