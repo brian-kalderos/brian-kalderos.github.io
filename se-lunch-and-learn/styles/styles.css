@@ -119,10 +119,10 @@ a:visited {
 
 .title-slide-cover {
   flex: 1;
-}
-
-.title-slide-cover img {
-  height: 100%;
+  background-image: url("../images/cover.jpg");
+  background-position: top left;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .title-slide-content {
