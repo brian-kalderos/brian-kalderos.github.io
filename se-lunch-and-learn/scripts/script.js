@@ -1,6 +1,6 @@
 const links = [
   { view: 'team', page: 'team.html', icon: 'bi-people' },
-  { view: 'definition', page: 'definition.html', icon: 'bi-braces' },
+  { view: 'fullstack', page: 'fullstack.html', icon: 'bi-layers' },
   { view: 'tech', page: 'tech.html', icon: 'bi-cpu' },
   { view: 'sdlc', page: 'sdlc.html', icon: 'bi-arrow-repeat' },
   { view: 'apps', page: 'apps.html', icon: 'bi-window-sidebar' },
